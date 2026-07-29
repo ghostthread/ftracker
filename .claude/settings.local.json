@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('lambda_function.py'\\).read\\(\\)\\); print\\('Syntax OK'\\)\")",
+      "Bash(chmod +x *)"
+    ]
+  }
+}

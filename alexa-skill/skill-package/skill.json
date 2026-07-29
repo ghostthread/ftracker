@@ -1,0 +1,44 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Voice-based expense logger for personal finance tracking",
+          "examplePhrases": [
+            "Alexa, ask Expense Tracker to log 50 dollars for groceries",
+            "Alexa, tell Expense Tracker I spent 100 on fuel",
+            "Alexa, ask Expense Tracker to add 25 dollars for lunch"
+          ],
+          "name": "Expense Tracker",
+          "description": "A voice-first expense tracking application that lets you log spending in seconds by simply telling Alexa what you spent and on what category."
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Say 'Alexa, ask Expense Tracker to log 50 dollars for groceries'",
+      "category": "PRODUCTIVITY",
+      "distributionCountries": [
+        "US"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda"
+        }
+      }
+    },
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": true,
+      "isChildDirected": false,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://example.com/privacy",
+          "termsOfUseUrl": "https://example.com/terms"
+        }
+      }
+    }
+  }
+}

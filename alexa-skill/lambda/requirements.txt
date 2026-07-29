@@ -1,0 +1,2 @@
+# No third-party packages required for the current POC handler.
+# Re-add ask-sdk-core / ask-sdk-model when switching back to ASK SDK.

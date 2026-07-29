@@ -1,0 +1,285 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "north star",
+      "intents": [
+        { "name": "AMAZON.CancelIntent", "samples": [] },
+        { "name": "AMAZON.FallbackIntent", "samples": [] },
+        { "name": "AMAZON.HelpIntent", "samples": [] },
+        { "name": "AMAZON.StopIntent", "samples": [] },
+        { "name": "AMAZON.YesIntent", "samples": [] },
+        { "name": "AMAZON.NoIntent", "samples": [] },
+        {
+          "name": "LogExpenseIntent",
+          "slots": [
+            {
+              "name": "amount",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{amount}",
+                "{amount} rupees",
+                "{amount} dollars"
+              ]
+            },
+            {
+              "name": "category",
+              "type": "CategoryType",
+              "samples": [
+                "{category}",
+                "on {category}",
+                "for {category}",
+                "at {category}"
+              ]
+            }
+          ],
+          "samples": [
+            "I spent {amount} on {category}",
+            "I spent {amount} rupees on {category}",
+            "I spent {amount} for {category}",
+            "spent {amount} on {category}",
+            "spent {amount} for {category}",
+            "paid {amount} for {category}",
+            "log {amount} for {category}",
+            "add {amount} for {category}",
+            "record {amount} for {category}",
+            "I spent {amount}",
+            "I spent {amount} rupees",
+            "spent {amount}",
+            "log {amount}",
+            "add {amount}",
+            "record {amount}",
+            "add an expense",
+            "record an expense",
+            "log an expense",
+            "new expense",
+            "log expense",
+            "add expense"
+          ]
+        },
+        {
+          "name": "GetSummaryIntent",
+          "slots": [
+            {
+              "name": "timePeriod",
+              "type": "TimePeriodType"
+            }
+          ],
+          "samples": [
+            "what did I spend {timePeriod}",
+            "how much did I spend {timePeriod}",
+            "show me {timePeriod} spending",
+            "show my {timePeriod} summary",
+            "my {timePeriod} expenses",
+            "{timePeriod} summary",
+            "{timePeriod} spending",
+            "what are my expenses",
+            "spending summary",
+            "expense summary"
+          ]
+        },
+        {
+          "name": "AnalyticsIntent",
+          "slots": [],
+          "samples": [
+            "where am I spending the most",
+            "top spending category",
+            "show spending trends",
+            "category breakdown",
+            "analytics",
+            "spending breakdown"
+          ]
+        },
+        {
+          "name": "BulkExpenseIntent",
+          "slots": [],
+          "samples": [
+            "record multiple expenses",
+            "log multiple expenses",
+            "add several expenses",
+            "multiple expenses"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "CategoryType",
+          "values": [
+            {
+              "id": "FOOD",
+              "name": {
+                "value": "food",
+                "synonyms": [
+                  "meals", "lunch", "dinner", "breakfast", "brunch",
+                  "coffee", "tea", "chai", "cafe", "restaurant", "hotel",
+                  "zomato", "swiggy", "biryani", "pizza", "burger",
+                  "snacks", "juice", "eating out", "dine out"
+                ]
+              }
+            },
+            {
+              "id": "GROCERY",
+              "name": {
+                "value": "grocery",
+                "synonyms": [
+                  "groceries", "vegetables", "veggies", "fruits",
+                  "milk", "eggs", "bread", "supermarket", "kirana",
+                  "blinkit", "zepto", "dmart", "big basket", "bigbasket",
+                  "instamart", "fresh produce", "dairy"
+                ]
+              }
+            },
+            {
+              "id": "FUEL",
+              "name": {
+                "value": "fuel",
+                "synonyms": [
+                  "petrol", "diesel", "gas", "cng", "charging",
+                  "ev charging", "filling station"
+                ]
+              }
+            },
+            {
+              "id": "SHOPPING",
+              "name": {
+                "value": "shopping",
+                "synonyms": [
+                  "clothes", "clothing", "shoes", "accessories",
+                  "amazon", "flipkart", "myntra", "meesho",
+                  "fashion", "apparel", "electronics", "gadgets"
+                ]
+              }
+            },
+            {
+              "id": "RENT",
+              "name": {
+                "value": "rent",
+                "synonyms": [
+                  "house rent", "apartment rent", "flat rent",
+                  "pg rent", "hostel", "room rent"
+                ]
+              }
+            },
+            {
+              "id": "BILLS",
+              "name": {
+                "value": "bills",
+                "synonyms": [
+                  "utilities", "electricity", "water bill",
+                  "internet", "broadband", "wifi", "phone bill",
+                  "mobile bill", "recharge", "dth", "gas bill",
+                  "maintenance", "society charges"
+                ]
+              }
+            },
+            {
+              "id": "TRAVEL",
+              "name": {
+                "value": "travel",
+                "synonyms": [
+                  "cab", "taxi", "uber", "ola", "auto", "autorickshaw",
+                  "bus", "train", "metro", "flight", "rapido",
+                  "airport", "commute", "toll", "parking"
+                ]
+              }
+            },
+            {
+              "id": "ENTERTAINMENT",
+              "name": {
+                "value": "entertainment",
+                "synonyms": [
+                  "movie", "movies", "cinema", "pvr", "inox",
+                  "concert", "event", "games", "gaming", "sports",
+                  "amusement", "outing"
+                ]
+              }
+            },
+            {
+              "id": "HEALTH",
+              "name": {
+                "value": "health",
+                "synonyms": [
+                  "medicine", "medicines", "doctor", "hospital",
+                  "pharmacy", "medical", "chemist", "clinic",
+                  "lab test", "consultation", "gym", "fitness"
+                ]
+              }
+            },
+            {
+              "id": "SUBSCRIPTION",
+              "name": {
+                "value": "subscription",
+                "synonyms": [
+                  "subscriptions", "netflix", "prime", "amazon prime",
+                  "spotify", "youtube premium", "hotstar", "disney",
+                  "apple", "icloud", "software", "saas"
+                ]
+              }
+            },
+            {
+              "id": "MISC",
+              "name": {
+                "value": "miscellaneous",
+                "synonyms": [
+                  "misc", "other", "others", "random",
+                  "general", "personal care", "haircut", "barber",
+                  "salon", "laundry", "gifts", "donation"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "TimePeriodType",
+          "values": [
+            { "id": "TODAY",      "name": { "value": "today" } },
+            { "id": "YESTERDAY",  "name": { "value": "yesterday" } },
+            { "id": "THIS_WEEK",  "name": { "value": "this week",  "synonyms": ["week", "current week"] } },
+            { "id": "LAST_WEEK",  "name": { "value": "last week",  "synonyms": ["previous week"] } },
+            { "id": "THIS_MONTH", "name": { "value": "this month", "synonyms": ["month", "current month"] } },
+            { "id": "LAST_MONTH", "name": { "value": "last month", "synonyms": ["previous month"] } },
+            { "id": "THIS_YEAR",  "name": { "value": "this year",  "synonyms": ["year", "current year"] } }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "LogExpenseIntent",
+          "delegationStrategy": "SKILL_RESPONSE",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "amount",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": { "elicitation": "Elicit.amount" }
+            },
+            {
+              "name": "category",
+              "type": "CategoryType",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": { "elicitation": "Elicit.category" }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.amount",
+        "variations": [
+          { "type": "PlainText", "value": "How much did you spend?" }
+        ]
+      },
+      {
+        "id": "Elicit.category",
+        "variations": [
+          { "type": "PlainText", "value": "What was it for? Say something like food, grocery, or fuel." }
+        ]
+      }
+    ]
+  }
+}
