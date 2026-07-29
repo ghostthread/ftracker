@@ -63,8 +63,7 @@ def _resolve_category(intent):
 
 def _save_expense(expense):
     # Update this
-    gist_id = ''
-    token = ''
+
     url = f"https://api.github.com/gists/{gist_id}"
 
     def _req(method, payload=None):
